@@ -7,6 +7,7 @@
     <groupId>votingSystem</groupId>
     <artifactId>votingSystem</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
     <properties>
         <java.version>1.8</java.version>
@@ -142,6 +143,7 @@
             <artifactId>postgresql</artifactId>
             <version>${postgresql.version}</version>
         </dependency>
+        <!--DB connection pull Tomcat-->
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-jdbc</artifactId>
