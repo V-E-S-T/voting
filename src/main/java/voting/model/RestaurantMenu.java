@@ -1,13 +1,21 @@
 package voting.model;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.List;
 
-public class RestaurantMenu {
+@Entity
+@Table(name = "restaurantmenu")
+public class RestaurantMenu  extends AbstractBaseEntity{
 
-    private Integer id;
-
+    @Column(name = "restaurantname", nullable = false)
+    @NotBlank
+    @Size(min = 2, max = 100)
     private String restaurantName;
 
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
+    @JoinColumn(name = "restaurant_id", referencedColumnName = "id")
     private List<Dish> menu;
 
     public RestaurantMenu() {

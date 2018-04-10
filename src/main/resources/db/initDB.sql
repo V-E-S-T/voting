@@ -32,7 +32,7 @@ CREATE TABLE restaurantmenu
 CREATE TABLE dishes
 (
   id          INTEGER PRIMARY KEY DEFAULT nextval('global_seq'),
-  restourant_ID    INTEGER                 NOT NULL,
+  restaurant_ID    INTEGER                 NOT NULL,
   price            DECIMAL                 NOT NULL,
   dish             VARCHAR                 NOT NULL,
   FOREIGN KEY (restourant_ID) REFERENCES restaurantmenu (id) ON DELETE CASCADE

@@ -1,9 +1,7 @@
 package voting.model;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -20,6 +18,10 @@ public class Dish extends AbstractBaseEntity{
     @Column(name = "price", nullable = false)
     @NotNull
     private double price;
+
+    @Column(name = "restaurant_id", nullable = false)
+    @NotNull
+    private Integer restaurant_id;
 
     public Dish() {
     }
@@ -48,6 +50,14 @@ public class Dish extends AbstractBaseEntity{
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public Integer getRestaurant_id() {
+        return restaurant_id;
+    }
+
+    public void setRestaurant_id(Integer restaurant_id) {
+        this.restaurant_id = restaurant_id;
     }
 
     @Override

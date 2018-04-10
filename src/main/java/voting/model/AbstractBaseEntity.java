@@ -11,7 +11,6 @@ public abstract class AbstractBaseEntity implements Persistable<Integer>{
 
     public static final int START_SEQUENCE = 100000;
 
-
     @Id
     @SequenceGenerator(name = "global_seq", sequenceName = "global_seq", initialValue = START_SEQUENCE, allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "global_seq")
