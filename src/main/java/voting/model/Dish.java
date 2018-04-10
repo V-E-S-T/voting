@@ -26,14 +26,15 @@ public class Dish extends AbstractBaseEntity{
     public Dish() {
     }
 
-    public Dish(@NotBlank String dishName, @NotNull double price) {
-        this(null, dishName, price);
+    public Dish(@NotBlank String dishName, @NotNull double price, Integer restaurant_id) {
+        this(null, dishName, price, restaurant_id);
     }
 
-    public Dish(Integer id,  String dishName, double price) {
+    public Dish(Integer id,  String dishName, double price, Integer restaurant_id) {
         super(id);
         this.dishName = dishName;
         this.price = price;
+        this.restaurant_id = restaurant_id;
     }
 
     public String getDishName() {

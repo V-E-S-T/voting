@@ -19,7 +19,7 @@ INSERT INTO restaurantmenu (restaurantName) VALUES
   ('BLINCHIKOVAYA'),         --100005
   ('U GALI');                --100006
 
-INSERT INTO dishes (dish, price, restaurant_id) VALUES
+INSERT INTO dishes (dish, price, restourant_ID) VALUES
   ('Котлета по киевски', 15, 100002),
   ('Зама с лапшой', 1000, 100002),
   ('Борщ', 5, 100002),
