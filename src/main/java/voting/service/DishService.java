@@ -1,11 +1,14 @@
 package voting.service;
 
 import voting.model.Dish;
-import voting.model.RestaurantMenu;
 
 import java.util.List;
 
 public interface DishService{
+
+    void deleteAllByRestaurantMenu(int restaurantMenuId);
+
+    boolean delete(int id, int restaurantMenuId);
 
     Dish get(int id);
 
@@ -13,10 +16,6 @@ public interface DishService{
 
     Dish update(Dish dish);
 
-    boolean delete(int id);
-
-    List<Dish> getAllByRestaurantMenu(RestaurantMenu restaurantMenu);
-
-    void deleteAllByRestaurantMenu(RestaurantMenu restaurantMenu);
+    List<Dish> getAllByRestaurantMenu(int restaurantMenuId);
 
 }

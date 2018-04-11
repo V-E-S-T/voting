@@ -21,7 +21,7 @@ public class Dish extends AbstractBaseEntity{
 
     @Column(name = "restaurant_id", nullable = false)
     @NotNull
-    private Integer restaurant_id;
+    private Integer restaurantId;
 
     public Dish() {
     }
@@ -34,7 +34,7 @@ public class Dish extends AbstractBaseEntity{
         super(id);
         this.dishName = dishName;
         this.price = price;
-        this.restaurant_id = restaurant_id;
+        this.restaurantId = restaurant_id;
     }
 
     public String getDishName() {
@@ -53,12 +53,12 @@ public class Dish extends AbstractBaseEntity{
         this.price = price;
     }
 
-    public Integer getRestaurant_id() {
-        return restaurant_id;
+    public Integer getRestaurantId() {
+        return restaurantId;
     }
 
-    public void setRestaurant_id(Integer restaurant_id) {
-        this.restaurant_id = restaurant_id;
+    public void setRestaurantId(Integer restaurantId) {
+        this.restaurantId = restaurantId;
     }
 
     @Override

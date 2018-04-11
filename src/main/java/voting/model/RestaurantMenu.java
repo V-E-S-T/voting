@@ -4,6 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -21,7 +22,7 @@ public class RestaurantMenu  extends AbstractBaseEntity{
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
     @JoinColumn(name = "restaurant_id", referencedColumnName = "id")
-    private List<Dish> menu;
+    private List<Dish> menu = new ArrayList<>();
 
     public RestaurantMenu() {
     }
@@ -45,5 +46,13 @@ public class RestaurantMenu  extends AbstractBaseEntity{
 
     public void setMenu(List<Dish> menu) {
         this.menu = menu;
+    }
+
+    public int getVote() {
+        return vote;
+    }
+
+    public void setVote(int vote) {
+        this.vote = vote;
     }
 }
