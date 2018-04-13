@@ -33,4 +33,9 @@ public class UserRepositoryImpl implements UserRepository{
     public List<User> getAll() {
         return jpaUserRepository.findAll(SORT_NAME_EMAIL);
     }
+
+    @Override
+    public void setrestaurantId(int id, int restaurantId) {
+        jpaUserRepository.setrestaurantId(id, restaurantId);
+    }
 }

@@ -12,7 +12,8 @@ CREATE TABLE users
   name             VARCHAR                 NOT NULL,
   email            VARCHAR                 NOT NULL,
   password         VARCHAR                 NOT NULL,
-  voted            BOOL DEFAULT FALSE      NOT NULL
+  voted            BOOL DEFAULT FALSE      NOT NULL,
+  restaurantId     INTEGER
 );
 
 CREATE TABLE usersRole

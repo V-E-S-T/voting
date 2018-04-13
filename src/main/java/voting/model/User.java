@@ -41,7 +41,23 @@ public class User  extends AbstractBaseEntity{
     @Column(name = "voted", nullable = false, columnDefinition = "bool default false")
     private boolean voted;
 
+    @Column(name = "restaurantId")
+    private int restaurantId;
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
+
+    public void setRestaurantId(int restaurantId) {
+        this.restaurantId = restaurantId;
+    }
+
     public User() {
+
+    }
+
+    public int getRestaurantId() {
+        return restaurantId;
     }
 
     public User(User user) {

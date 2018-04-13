@@ -15,4 +15,6 @@ public interface UserService {
     List<User> getAll();
 
     User get(int id);
+
+    boolean vote(int id, int restaurantId);
 }

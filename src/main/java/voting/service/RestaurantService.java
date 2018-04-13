@@ -14,4 +14,8 @@ public interface RestaurantService {
 
     RestaurantMenu update(RestaurantMenu restaurantMenu);
 
+    RestaurantMenu get(int id);
+
+    void incrementVoteCount(int id, int vote);
+
 }

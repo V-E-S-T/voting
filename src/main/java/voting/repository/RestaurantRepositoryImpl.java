@@ -30,4 +30,9 @@ public class RestaurantRepositoryImpl implements RestaurantRepository{
     public List<RestaurantMenu> getAll() {
         return jpaRestaurantRepository.findAll();
     }
+
+    @Override
+    public void setVoteCount(int id, int vote) {
+        jpaRestaurantRepository.setVoteCount(id, vote);
+    }
 }

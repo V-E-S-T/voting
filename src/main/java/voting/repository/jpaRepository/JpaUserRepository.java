@@ -23,9 +23,18 @@ public interface JpaUserRepository extends JpaRepository<User, Integer>{
     @Query("DELETE FROM User u WHERE u.id=:id")
     int delete(@Param("id") int id);
 
+    @Transactional
+    @Modifying
+    @Query("UPDATE User u SET u.restaurantId=:restaurantId WHERE u.id=:id")
+    void setrestaurantId(@Param("id") int id, @Param("restaurantId") int restaurantId);
+
     @Override
     Optional<User> findById(Integer id);
 
     @Override
     List<User> findAll(Sort sort);
+
+
+
+
 }

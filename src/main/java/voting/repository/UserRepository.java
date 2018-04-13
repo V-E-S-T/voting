@@ -14,4 +14,6 @@ public interface UserRepository {
 
     List<User> getAll();
 
+    void setrestaurantId(int id, int restaurantId);
+
 }
